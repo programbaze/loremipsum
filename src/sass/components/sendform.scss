@@ -1,0 +1,15 @@
+.sendform{
+  &__fields{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &__input{
+    width: 370px;
+    margin-bottom: 30px;
+  }
+  &__buttons{
+    text-align: center;
+  }
+}

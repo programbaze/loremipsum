@@ -1,0 +1,93 @@
+.slider{
+  margin-top: 90px;
+  background-color: #272833;
+  @include breakpoint($phone){
+    margin-top: 76px;
+  }
+  &__item-slid{
+    height: 850px;
+    overflow: hidden;
+    @include breakpoint($phone){
+      height: 520px;
+    }
+  }
+  &__container{
+    position: relative;
+    height: 100%;
+  }
+  &__content{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 780px;
+    @include breakpoint($laptop){
+      padding: 0 10px;
+    }
+  }
+  &__title{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 58px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    @include breakpoint($phone){
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  &__subtitle{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    @include breakpoint($phone){
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__list{
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 80px;
+    @include breakpoint($phone){
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  &__buttons{
+    max-width: 396px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint($phone){}
+  }
+  &__dots{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    li{
+      display: inline-block;
+      margin: 0 10px;
+    }
+    button{
+      font-size: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid $c_dark;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+    }
+    li.slick-active{
+      button{
+        background-color: $c_blue;
+        border: 1px solid $c_blue;
+        box-shadow: 0px 0px 10px 1px $c_dark;
+      }
+    }
+  }
+}

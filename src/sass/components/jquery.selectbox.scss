@@ -1,0 +1,151 @@
+.sbHolder{
+	background-color: #fff;
+	border: solid 1px $c_blue;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	height: 48px;
+	position: relative;
+	width: 370px;
+	transition: 0.3s;
+	&_open{
+		background-color: rgba(61, 64, 80, 0.85);
+		border: solid 1px rgba(61, 64, 80, 0.85);
+	}
+	&:hover, &:focus, &:focus-visible{
+		box-shadow: 0px 0px 10px 1px $c_blue;
+	}
+}
+.sbHolder:focus .sbSelector{
+	
+}
+
+.sbSelector{
+	display: block;
+	height: 48px;
+	left: 0;
+	line-height: 48px;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 10px;
+	top: 0;
+	width: 270px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color: $c_dark;
+	outline: none;
+	text-decoration: none;
+	font-size: 18px;
+}
+.sbHolder_open{
+	.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+		color: #fff;
+	}
+}
+.sbToggle{
+	background-image: url('/f/i/icons/arrow-black.svg');
+	display: block;
+	height: 100%;
+	outline: none;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	width: 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+//.sbToggle:hover{
+//	background-image: url('/f/i/icons/arrow.svg');
+//}
+.sbToggleOpen {
+	background-image: url('/f/i/icons/arrow.svg');
+}
+//.sbToggleOpen:hover{
+//	background-image: url('/f/i/icons/arrow.svg');
+//}
+
+.sbHolderDisabled{
+	background-color: #3C3C3C;
+	border: solid 1px #515151;
+}
+.sbHolderDisabled .sbHolder{
+	
+}
+.sbHolderDisabled .sbToggle{
+	
+}
+.sbOptions{
+	background-color: $c_dark;
+	border: solid 1px rgba(61, 64, 80, 0.85);
+	list-style: none;
+	left: -1px;
+	margin: -1px 0 0 0;
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	width: 370px;
+	height: 228px;
+	z-index: 1;
+	overflow-y: auto;
+}
+.sbOptions li{
+	padding: 0 7px;
+}
+.sbOptions li:first-child{
+	display: none;
+}
+.sbOptions a{
+	//border-bottom: dotted 1px #515151;
+	display: block;
+	outline: none;
+	padding: 10px 0 10px 3px;
+	font-size: 18px;
+	color: #fff;
+}
+.sbOptions a:link, .sbOptions a:visited{
+	color: #fff;
+	text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: $c_blue;
+}
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	border-bottom: dotted 1px #515151;
+	color: #999;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup{
+	border-bottom: dotted 1px #515151;
+	color: #EBB52D;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}
+
+.sbOptions::-webkit-scrollbar{
+	height: 16px;
+	width: 16px;
+}
+
+.sbOptions::-webkit-scrollbar-track{
+	background-color: rgba(61, 64, 80, 0.85);
+	border-radius: 10px;
+	border: 4px solid $c_dark;
+}
+
+.sbOptions::-webkit-scrollbar-thumb{
+	background-color: $c_blue;
+	border-radius: 10px;
+	border: 4px solid $c_dark;
+}
