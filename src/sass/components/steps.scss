@@ -12,7 +12,7 @@
     top: 49px;
     background-repeat: repeat-x;
     background-position: center;
-    background-image: url("/f/i/dot.webp");
+    background-image: url("f/i/dot.webp");
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 100px);
@@ -35,19 +35,19 @@
     background-position: center;
     background-size: 40%;
     &_search{
-      background-image: url("/f/i/icons/search.svg");
+      background-image: url("f/i/icons/search.svg");
     }
     &_percent{
-      background-image: url("/f/i/icons/percent.svg");
+      background-image: url("f/i/icons/percent.svg");
     }
     &_attach{
-      background-image: url("/f/i/icons/attach.svg");
+      background-image: url("f/i/icons/attach.svg");
     }
     &_mail{
-      background-image: url("/f/i/icons/mail-white.svg");
+      background-image: url("f/i/icons/mail-white.svg");
     }
     &_cash{
-      background-image: url("/f/i/icons/cash.svg");
+      background-image: url("f/i/icons/cash.svg");
     }
   }
   &__text{
