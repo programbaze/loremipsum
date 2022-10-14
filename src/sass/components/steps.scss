@@ -1,10 +1,19 @@
 .steps{
   margin-bottom: 80px;
+  &__container{
+    @include breakpoint($tablet){
+      overflow-x: scroll;
+    }
+  }
   &__inner{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    @include breakpoint($tablet){
+      width: 900px;
+      padding-bottom: 10px;
+    }
   }
   &__dots{
     height: 6px;
@@ -17,9 +26,16 @@
     transform: translateX(-50%);
     width: calc(100% - 100px);
     z-index: 8;
+    @include breakpoint($tablet){
+      width: calc(100% - 130px);
+      top: 35px;
+    }
   }
   &__item-step {
     width: 200px;
+    @include breakpoint($tablet){
+      width: 170px;
+    }
   }
   &__circle{
     height: 100px;
@@ -34,6 +50,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40%;
+    @include breakpoint($tablet){
+      height: 70px;
+      width: 70px;
+    }
     &_search{
       background-image: url("/loremipsum/f/i/icons/search.svg");
     }
@@ -54,5 +74,8 @@
     color: #fff;
     font-size: 16px;
     text-align: center;
+    @include breakpoint($tablet){
+      font-size: 14px;
+    }
   }
 }

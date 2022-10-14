@@ -4,5 +4,9 @@
     font-size: 18px;
     text-align: center;
     color: #bbbbbb;
+    @include breakpoint($phone){
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

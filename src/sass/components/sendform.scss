@@ -5,11 +5,28 @@
     justify-content: space-between;
     margin-bottom: 80px;
   }
-  &__input{
+  &__input, &__inputfile{
     width: 370px;
     margin-bottom: 30px;
+    @include breakpoint($laptop){
+      width: 48%;
+    }
+    @include breakpoint($phone){
+      width: 100%;
+    }
   }
   &__buttons{
     text-align: center;
+  }
+  &__inputfile{
+    @include breakpoint($laptop){
+      order: 3;
+    }
+  }
+  &__range{
+    @include breakpoint($laptop){
+      order: 4;
+      width: 100%!important;
+    }
   }
 }
